@@ -11,7 +11,7 @@ class FoodListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Food"
+        self.title = "Food Items"
         tableViewDatasource  = RestaurantTableViewDatasource(foodItems: RestaurantData.sharedData().getFoodItems())
         self.tableView.dataSource = tableViewDatasource
         self.tableView.reloadData()
