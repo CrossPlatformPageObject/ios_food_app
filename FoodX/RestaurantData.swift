@@ -17,24 +17,24 @@ class RestaurantData {
         }
         return Static.instance!
     }
-init() {
-    foodItems = foodItemNames.map({ (foodName) -> Item in
-        return Item(itemName: foodName, itemPrice: Int(arc4random_uniform(100)));
-    })
-    cartItems = []
-}
-
-let foodItemNames = ["Pav Bhaji","Idli","Masala Dosa","Pani Puri","Bhel","Roti Sabzi","Raj Kachori","Subway Sandwich","Kadhi Chaval","Dal Makhani","Plain Dal","Ice cream","Sheera","Brownie","Cold Coffee","Lime Juice","Filter Coffee","Masala Chai"]
-
-internal func getFoodItems () -> [Item] {
-    return foodItems;
-}
-
-internal func addToCart(item: Item) {
-    cartItems.append(item)
-}
-
-internal func getCartItems() -> [Item] {
-    return cartItems
-}
+    init() {
+        foodItems = foodItemNames.map({ (foodName) -> Item in
+            return Item(itemName: foodName, itemPrice: Int(arc4random_uniform(100)));
+        })
+        cartItems = []
+    }
+    
+    let foodItemNames = ["Pav Bhaji","Idli","Masala Dosa","Pani Puri","Bhel","Roti Sabzi","Raj Kachori","Subway Sandwich","Kadhi Chaval","Dal Makhani","Plain Dal","Ice cream","Sheera","Brownie","Cold Coffee","Lime Juice","Filter Coffee","Masala Chai"]
+    
+    internal func getFoodItems () -> [Item] {
+        return foodItems;
+    }
+    
+    internal func addToCart(item: Item) {
+        cartItems.append(item)
+    }
+    
+    internal func getCartItems() -> [Item] {
+        return cartItems
+    }
 }

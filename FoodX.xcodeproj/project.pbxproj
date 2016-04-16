@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CACA501CB9590700799DD1 /* PaymentPreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACA4F1CB9590700799DD1 /* PaymentPreferenceViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		04CACA521CB9636500799DD1 /* PurchaseSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACA511CB9636500799DD1 /* PurchaseSummaryVC.swift */; settings = {ASSET_TAGS = (); }; };
 		FF34ECDE1BD37F9B00C6C786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34ECDD1BD37F9B00C6C786 /* AppDelegate.swift */; };
 		FF34ECE01BD37F9B00C6C786 /* FoodListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34ECDF1BD37F9B00C6C786 /* FoodListViewController.swift */; };
 		FF34ECE51BD37F9B00C6C786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF34ECE31BD37F9B00C6C786 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04CACA4F1CB9590700799DD1 /* PaymentPreferenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPreferenceViewController.swift; sourceTree = "<group>"; };
+		04CACA511CB9636500799DD1 /* PurchaseSummaryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseSummaryVC.swift; sourceTree = "<group>"; };
 		FF34ECDA1BD37F9B00C6C786 /* FoodX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF34ECDD1BD37F9B00C6C786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF34ECDF1BD37F9B00C6C786 /* FoodListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				FF34ECF71BD3B91300C6C786 /* RestaurantTableViewDatasource.swift */,
 				FF34ECFD1BD3C9B800C6C786 /* cart.png */,
 				FF34ECFF1BD3C9CC00C6C786 /* food.png */,
+				04CACA4F1CB9590700799DD1 /* PaymentPreferenceViewController.swift */,
+				04CACA511CB9636500799DD1 /* PurchaseSummaryVC.swift */,
 			);
 			path = FoodX;
 			sourceTree = "<group>";
@@ -165,10 +171,12 @@
 				FF34ECDE1BD37F9B00C6C786 /* AppDelegate.swift in Sources */,
 				FF34ECF21BD3ABFA00C6C786 /* RestaurantData.swift in Sources */,
 				FF34ECFC1BD3C21B00C6C786 /* AddressViewController.swift in Sources */,
+				04CACA521CB9636500799DD1 /* PurchaseSummaryVC.swift in Sources */,
 				FF34ECF81BD3B91300C6C786 /* RestaurantTableViewDatasource.swift in Sources */,
 				FF34ECF41BD3AFA900C6C786 /* FoodDetailViewController.swift in Sources */,
 				FF34ECF61BD3B06C00C6C786 /* Item.swift in Sources */,
 				FF34ECE01BD37F9B00C6C786 /* FoodListViewController.swift in Sources */,
+				04CACA501CB9590700799DD1 /* PaymentPreferenceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

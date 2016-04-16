@@ -5,6 +5,78 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Payment Preference View Controller-->
+        <scene sceneID="SMb-qa-KDH">
+            <objects>
+                <viewController id="lHT-7c-HtP" customClass="PaymentPreferenceViewController" customModule="FoodX" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a0M-aO-Kiz"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZFK-uE-meI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dtS-1D-QRv">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C40-XL-Nu9">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <accessibility key="accessibilityConfiguration" identifier="paymentPreference"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcC-Jq-kFA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Proceed"/>
+                                <connections>
+                                    <action selector="showPaymentPage:" destination="lHT-7c-HtP" eventType="touchUpInside" id="6rc-DD-MyE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FcC-Jq-kFA" firstAttribute="centerX" secondItem="dtS-1D-QRv" secondAttribute="centerX" id="0TN-cC-Zzx"/>
+                            <constraint firstItem="FcC-Jq-kFA" firstAttribute="leading" secondItem="dtS-1D-QRv" secondAttribute="leading" constant="172" id="0le-3K-WBR"/>
+                            <constraint firstItem="FcC-Jq-kFA" firstAttribute="top" secondItem="C40-XL-Nu9" secondAttribute="bottom" constant="15" id="1U0-tb-xch"/>
+                            <constraint firstAttribute="trailing" secondItem="C40-XL-Nu9" secondAttribute="trailing" id="Nrd-Eq-5uK"/>
+                            <constraint firstItem="C40-XL-Nu9" firstAttribute="leading" secondItem="dtS-1D-QRv" secondAttribute="leading" id="UGg-3y-59M"/>
+                            <constraint firstItem="C40-XL-Nu9" firstAttribute="top" secondItem="dtS-1D-QRv" secondAttribute="top" id="ktY-Ys-lLn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="C40-XL-Nu9"/>
+                                <exclude reference="FcC-Jq-kFA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Nrd-Eq-5uK"/>
+                                <exclude reference="UGg-3y-59M"/>
+                                <exclude reference="ktY-Ys-lLn"/>
+                                <exclude reference="0TN-cC-Zzx"/>
+                                <exclude reference="0le-3K-WBR"/>
+                                <exclude reference="1U0-tb-xch"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="C40-XL-Nu9"/>
+                                <include reference="FcC-Jq-kFA"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Nrd-Eq-5uK"/>
+                                <include reference="UGg-3y-59M"/>
+                                <include reference="ktY-Ys-lLn"/>
+                                <include reference="0TN-cC-Zzx"/>
+                                <exclude reference="0le-3K-WBR"/>
+                                <include reference="1U0-tb-xch"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="paymentPreference" destination="C40-XL-Nu9" id="83g-Rn-1nQ"/>
+                        <segue destination="Dyz-qi-nID" kind="show" identifier="cash" id="os7-8I-kWQ"/>
+                        <segue destination="xvR-Go-iR0" kind="show" identifier="credit" id="2tD-SU-vT3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lK6-z6-fJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2172" y="1074"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -90,29 +162,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UT-ns-Lbf">
-                                <rect key="frame" x="204" y="304" width="193" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Cash On Delivery"/>
-                                <connections>
-                                    <segue destination="Dyz-qi-nID" kind="show" id="ern-1C-zMl"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow7-zP-1Cw">
                                 <rect key="frame" x="196" y="218" width="209" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Pay By Credit Card"/>
+                                <state key="normal" title="Proceed for Payment"/>
                                 <connections>
-                                    <segue destination="xvR-Go-iR0" kind="show" id="DXb-7m-okF"/>
+                                    <segue destination="lHT-7c-HtP" kind="show" id="YPG-9B-L28"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PC9-q8-egU" firstAttribute="leading" secondItem="oFu-Fw-vu2" secondAttribute="leadingMargin" id="9FJ-mL-oUn"/>
-                            <constraint firstItem="5UT-ns-Lbf" firstAttribute="top" secondItem="Ow7-zP-1Cw" secondAttribute="bottom" constant="44" id="Kp3-AZ-FaV"/>
                             <constraint firstItem="Ow7-zP-1Cw" firstAttribute="top" secondItem="PC9-q8-egU" secondAttribute="bottom" constant="53" id="NIj-7W-Hvp"/>
-                            <constraint firstItem="5UT-ns-Lbf" firstAttribute="centerX" secondItem="oFu-Fw-vu2" secondAttribute="centerX" id="NcB-ZJ-vO6"/>
                             <constraint firstItem="2VB-mI-kle" firstAttribute="leading" secondItem="oFu-Fw-vu2" secondAttribute="leadingMargin" id="Nq8-1d-AKL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2VB-mI-kle" secondAttribute="trailing" id="SjN-4e-Mom"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PC9-q8-egU" secondAttribute="trailing" id="XRE-mB-o6q"/>
@@ -179,28 +241,56 @@
         <!--Purchase Summary-->
         <scene sceneID="nzp-cg-JFE">
             <objects>
-                <viewController title="Purchase Summary" id="Dyz-qi-nID" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g3e-pE-45Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="0YB-Ww-zDZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Egt-y0-qel">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Purchase Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFI-wr-JKa">
-                                <rect key="frame" x="162" y="35" width="276" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                <viewController title="Purchase Summary" id="Dyz-qi-nID" customClass="PurchaseSummaryVC" customModule="FoodX" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BHK-xN-nsU">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="AFI-wr-JKa" firstAttribute="top" secondItem="g3e-pE-45Y" secondAttribute="bottom" constant="15" id="56j-x9-gh0"/>
-                            <constraint firstItem="AFI-wr-JKa" firstAttribute="centerX" secondItem="Egt-y0-qel" secondAttribute="centerX" id="XUP-4N-41y"/>
-                        </constraints>
-                    </view>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="slE-zN-uuD">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUMMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsh-uf-vBN">
+                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Bsh-uf-vBN" firstAttribute="centerY" secondItem="slE-zN-uuD" secondAttribute="centerY" id="TzT-eP-rW3"/>
+                                <constraint firstItem="Bsh-uf-vBN" firstAttribute="centerX" secondItem="slE-zN-uuD" secondAttribute="centerX" id="iUR-oi-Mcy"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="Bsh-uf-vBN"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="TzT-eP-rW3"/>
+                                    <exclude reference="iUR-oi-Mcy"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="Bsh-uf-vBN"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="TzT-eP-rW3"/>
+                                    <include reference="iUR-oi-Mcy"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TYa-72-p6c">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TYa-72-p6c" id="5l4-fe-obt">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HyL-Qp-VqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,6 +428,6 @@
         <image name="food.png" width="17" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ern-1C-zMl"/>
+        <segue reference="os7-8I-kWQ"/>
     </inferredMetricsTieBreakers>
 </document>
