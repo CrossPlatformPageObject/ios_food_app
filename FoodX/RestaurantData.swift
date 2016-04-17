@@ -24,7 +24,7 @@ class RestaurantData {
         cartItems = []
     }
     
-    let foodItemNames = ["Pav Bhaji","Idli","Masala Dosa","Pani Puri","Bhel","Roti Sabzi","Raj Kachori","Subway Sandwich","Kadhi Chaval","Dal Makhani","Plain Dal","Ice cream","Sheera","Brownie","Cold Coffee","Lime Juice","Filter Coffee","Masala Chai"]
+    let foodItemNames = ["Filter Coffee", "Dosa", "Samosa"]
     
     internal func getFoodItems () -> [Item] {
         return foodItems;
