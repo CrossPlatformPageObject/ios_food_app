@@ -212,15 +212,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Credit Cart Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-SY-kBg">
-                                <rect key="frame" x="20" y="104" width="560" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5NJ-9x-Nwe">
                                 <rect key="frame" x="480" y="166" width="100" height="30"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" identifier="cvv"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="DZn-9p-sc8"/>
                                 </constraints>
@@ -239,6 +234,13 @@
                                     <segue destination="Dyz-qi-nID" kind="show" id="S1U-lO-Z5t"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-SY-kBg">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" identifier="creditCardNumber" label=""/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
