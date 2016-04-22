@@ -244,6 +244,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5NJ-9x-Nwe" firstAttribute="top" secondItem="GTd-SY-kBg" secondAttribute="bottom" constant="32" id="52w-sW-2ew"/>
+                            <constraint firstItem="LbT-ot-wUN" firstAttribute="top" secondItem="qqr-mx-enW" secondAttribute="bottom" constant="53" id="8Fa-dE-mj5"/>
                             <constraint firstItem="5NJ-9x-Nwe" firstAttribute="trailing" secondItem="9k7-VA-3oo" secondAttribute="trailingMargin" id="AZt-f6-pJW"/>
                             <constraint firstItem="I7h-NT-qdG" firstAttribute="top" secondItem="LbT-ot-wUN" secondAttribute="bottom" constant="100" id="G3Z-qr-g0b"/>
                             <constraint firstItem="GTd-SY-kBg" firstAttribute="top" secondItem="qqr-mx-enW" secondAttribute="bottom" constant="40" id="RbP-21-4Hn"/>
@@ -251,6 +252,16 @@
                             <constraint firstItem="LbT-ot-wUN" firstAttribute="centerX" secondItem="9k7-VA-3oo" secondAttribute="centerX" id="d83-8H-8Sa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GTd-SY-kBg" secondAttribute="trailing" id="fnZ-r0-WCz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Fa-dE-mj5"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8Fa-dE-mj5"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWs-Kh-dvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
