@@ -1,6 +1,6 @@
 # ios_food_app
 
-This is sample app created for demostration of bulding framework for cross platform. 
+This is sample app created for demostration of automation framework for [cross platform](https://github.com/CrossPlatformPageObject/cross-platform-single-page-example).
 
 This application built with xcode 7.0. 
 
